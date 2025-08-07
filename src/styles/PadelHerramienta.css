@@ -1,7 +1,12 @@
 /* src/styles/PadelHerramienta.css */
+
+/* Importa las fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .padel-herramienta {
-  padding: 100px 20px; /* Padding vertical y horizontal base */
-  background-color: #fef8ef;
+  padding: 100px 20px;
+  background-color: #FFFFFF; /* CAMBIO: Fondo blanco para un aspecto más limpio */
   color: #333;
 }
 
@@ -9,85 +14,85 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row; /* Por defecto, elementos en fila */
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
-  align-items: center; /* Alinea los elementos verticalmente al centro */
-  gap: 50px; /* Espacio entre la imagen y el contenido */
-  padding: 0 15px; /* Añadido padding horizontal para asegurar espacio en bordes */
-  box-sizing: border-box; /* Incluye padding en el ancho total */
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .padel-herramienta .imagen {
-  flex: 1 1 45%; /* Crece, se encoge y tiene un base de 45% */
-  max-width: 550px; /* Limita el ancho máximo para la imagen */
-  min-width: 300px; /* Asegura un ancho mínimo para la imagen antes de que el layout cambie */
+  flex: 1 1 45%;
+  max-width: 550px;
+  min-width: 300px;
 }
 
 .padel-herramienta .imagen img {
   width: 100%;
-  height: auto; /* Mantiene la proporción de la imagen */
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .padel-herramienta .contenido {
-  flex: 1 1 50%; /* Crece, se encoge y tiene un base de 50% */
-  min-width: 350px; /* Asegura un ancho mínimo para el contenido de texto */
-  text-align: left; /* Asegura que el texto esté alineado a la izquierda por defecto */
+  flex: 1 1 50%;
+  min-width: 350px;
+  text-align: left;
 }
 
 .padel-herramienta h2 {
-  font-size: 2.2rem; /* Base para el título principal */
-  color: #f9b233;
+  font-size: 2.2rem;
+  color: #095272; /* Color azul de la marca para títulos */
   margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .padel-herramienta p {
-  font-size: 1.1rem; /* Base para los párrafos */
+  font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* --- Media Queries para hacer la sección responsive --- */
 
-/* Pantallas medianas a pequeñas (tabletas y algunos laptops) */
-@media (max-width: 992px) { /* Punto de quiebre para apilar los elementos */
+@media (max-width: 992px) {
   .padel-herramienta {
-    padding: 80px 15px; /* Reduce el padding general */
+    padding: 80px 15px;
   }
 
   .padel-herramienta-container {
-    flex-direction: column; /* Apila la imagen y el texto */
-    align-items: center; /* Centra los elementos apilados */
-    gap: 40px; /* Reduce el espacio entre la imagen y el contenido apilados */
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
 
   .padel-herramienta .imagen {
-    max-width: 80%; /* Limita el ancho de la imagen apilada */
-    min-width: unset; /* Deshabilita el min-width cuando se apila */
+    max-width: 80%;
+    min-width: unset;
   }
 
   .padel-herramienta .contenido {
-    text-align: center; /* Centra el texto cuando está apilado */
-    min-width: unset; /* Deshabilita el min-width */
-    max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    text-align: center;
+    min-width: unset;
+    max-width: 100%;
   }
 
   .padel-herramienta h2 {
-    font-size: 2rem; /* Reduce el tamaño del título */
+    font-size: 2rem;
     margin-bottom: 0.8rem;
   }
 
   .padel-herramienta p {
-    font-size: 1rem; /* Reduce el tamaño de los párrafos */
+    font-size: 1rem;
     margin-bottom: 0.8rem;
   }
 }
 
-/* Pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
   .padel-herramienta {
-    padding: 60px 10px; /* Reduce aún más el padding */
+    padding: 60px 10px;
   }
 
   .padel-herramienta h2 {
@@ -102,7 +107,6 @@
   }
 }
 
-/* Pantallas aún más pequeñas (celulares muy pequeños) */
 @media (max-width: 480px) {
   .padel-herramienta {
     padding: 40px 10px;

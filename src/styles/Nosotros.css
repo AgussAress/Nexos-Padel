@@ -1,7 +1,13 @@
 /* src/styles/Nosotros.css */
+
+/* Importa las fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
 .nosotros {
   padding: 100px 20px;
-  background-color: #ffffff;
+  background-color: #FFFFFF; /* Fondo blanco de la marca */
   color: #333;
 }
 
@@ -9,156 +15,137 @@
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 15px; /* Añadido padding horizontal para asegurar espacio en bordes */
-  box-sizing: border-box; /* Incluye padding en el ancho total */
 }
 
 .nosotros h2 {
-  font-size: 2.5rem; /* Base para el título principal */
-  color: #f9b233;
+  font-size: 2.5rem;
+  color: #095272; /* Color azul de la marca */
   margin-bottom: 2.5rem;
+  font-family: 'Playfair Display', serif; /* Tipografía de títulos */
 }
 
 .nosotros-content {
   display: flex;
-  align-items: flex-start; /* Alinea los elementos al inicio de su contenedor flex */
-  gap: 50px; /* Espacio entre la imagen y el texto */
+  align-items: flex-start;
+  gap: 50px;
   text-align: left;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
 }
 
 .nosotros-img {
-  flex: 1; /* Permite que la imagen crezca y se encoja */
-  max-width: 550px; /* Mantiene un tamaño máximo para la imagen */
-  min-width: 300px; /* Asegura un tamaño mínimo para que la imagen no se haga demasiado pequeña */
+  flex-basis: 50%;
+  text-align: center;
 }
 
 .nosotros-img img {
   width: 100%;
+  max-width: 500px;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.nosotros-img img:hover {
+  transform: translateY(-5px);
 }
 
 .nosotros-text {
-  flex: 1; /* Permite que el texto crezca y se encoja */
-  min-width: 350px; /* Aumentado ligeramente para mejor legibilidad en rangos intermedios */
-}
-
-.intro {
-  font-size: 1.2rem; /* Base para el párrafo introductorio */
-  margin-bottom: 1.5rem;
-  font-weight: 400;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nosotros-text p {
-  font-size: 1.1rem; /* Base para los párrafos generales */
+  font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 1.2rem;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif; /* Tipografía de texto */
+}
+
+.nosotros-text strong {
+  font-weight: 700;
+  color: #095272; /* Color amarillo de la marca como acento */
+}
+
+.equipo {
+  background-color: #E1DAC7; /* Color beige de la marca */
+  border-left: 5px solid #F7E74D; /* Borde izquierdo con el color de acento amarillo */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
 }
 
 .equipo h3 {
-  font-size: 1.8rem; /* Base para el título de "Nuestro Equipo" */
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  color: #f9b233;
+  font-size: 1.3rem;
+  color: #095272; /* Color azul de la marca */
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif; /* Tipografía de títulos */
 }
 
-/* La clase nosotros-decor no existe en tu JSX, la mantengo pero no tendrá efecto */
-/* .nosotros-decor {
-  margin-top: 30px;
-  text-align: center;
+.equipo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif; /* Tipografía de texto */
 }
-
-.nosotros-decor img {
-  max-width: 250px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-} */
 
 /* --- Media Queries para hacer la sección responsive --- */
 
-/* Pantallas medianas a pequeñas (tabletas y algunos laptops) */
-@media (max-width: 992px) { /* Cambiado de 900px a 992px para un punto de quiebre más común */
+@media (max-width: 992px) {
   .nosotros {
-    padding: 80px 15px; /* Reduce el padding general */
+    padding: 80px 15px;
   }
-
-  .nosotros h2 {
-    font-size: 2.2rem; /* Reduce el tamaño del título principal */
-    margin-bottom: 2rem;
-  }
-
   .nosotros-content {
-    flex-direction: column; /* Apila la imagen y el texto */
-    align-items: center; /* Centra los elementos apilados */
-    gap: 40px; /* Reduce el espacio entre la imagen y el texto apilados */
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .nosotros-img {
-    max-width: 80%; /* Limita el ancho de la imagen apilada */
-    min-width: unset; /* Deshabilita el min-width para adaptarse mejor */
+  .nosotros-img, .nosotros-text {
+    flex-basis: 100%;
+  }
+
+  .nosotros-img img {
+    max-width: 100%;
   }
 
   .nosotros-text {
-    text-align: center; /* Centra el texto cuando está apilado */
-    min-width: unset; /* Deshabilita el min-width */
-    max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    text-align: center;
   }
 
-  .intro,
-  .nosotros-text p {
-    font-size: 1.05rem; /* Reduce el tamaño de los párrafos */
-    text-align: center; /* Centra los párrafos */
-  }
-
-  .equipo h3 {
-    font-size: 1.6rem; /* Reduce el tamaño del título de "Nuestro Equipo" */
-    text-align: center; /* Centra el título del equipo */
+  .nosotros h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
   }
 }
 
 /* Pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
   .nosotros {
-    padding: 60px 10px; /* Reduce aún más el padding */
+    padding: 60px 10px;
   }
-
   .nosotros h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
   }
-
-  .nosotros-content {
-    gap: 30px;
-  }
-
-  .nosotros-img {
-    max-width: 95%; /* La imagen puede ocupar casi todo el ancho */
-  }
-
-  .intro,
   .nosotros-text p {
-    font-size: 0.95rem; /* Reduce el tamaño de los párrafos para móviles */
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
-
+  .equipo {
+    padding: 15px;
+  }
   .equipo h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+  .equipo p {
+    font-size: 0.95rem;
   }
 }
 
-/* Pantallas aún más pequeñas (celulares muy pequeños) */
+/* Pantallas muy pequeñas */
 @media (max-width: 480px) {
-  .nosotros {
-    padding: 40px 10px;
-  }
-
   .nosotros h2 {
     font-size: 1.8rem;
-  }
-
-  .intro,
-  .nosotros-text p {
-    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
   }
 }

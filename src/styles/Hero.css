@@ -1,4 +1,9 @@
 /* src/styles/Hero.css */
+
+/* Importa las fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .hero {
   position: relative;
   height: 100vh;
@@ -40,32 +45,41 @@
   z-index: 2;
   text-align: center;
   color: white;
-  max-width: 90%; /* Ajuste para mejor adaptabilidad en pantallas pequeñas */
+  max-width: 90%;
   padding: 20px;
-  box-sizing: border-box; /* Asegura que el padding no añada al ancho total */
+  box-sizing: border-box;
 }
 
 .hero h1 {
-  font-size: 3rem; /* Utilizaremos un valor base y luego ajustaremos con media queries */
+  font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  /* Aplicamos la tipografía de títulos */
+  font-family: 'Playfair Display', serif;
+  color: #FFFFFF; /* Mantenemos el color blanco para el título */
 }
 
 .subtitulo {
-  font-size: 1.5rem; /* Utilizaremos un valor base y luego ajustaremos con media queries */
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 400;
+  /* Aplicamos la tipografía de subtítulos */
+  font-family: 'Playfair Display', serif;
+  color: #FFFFFF;
 }
 
 .descripcion {
-  font-size: 1.1rem; /* Utilizaremos un valor base y luego ajustaremos con media queries */
+  font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 2rem;
+  /* Aplicamos la tipografía de texto secundario */
+  font-family: 'Poppins', sans-serif;
+  color: #FFFFFF;
 }
 
 .hero-button {
-  background-color: #f9b233;
-  color: #333;
+  background-color: #F7E74D; /* Color amarillo de la marca  */
+  color: #095272; /* Color azul de la marca  */
   padding: 14px 30px;
   border: none;
   border-radius: 30px;
@@ -73,11 +87,14 @@
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s ease;
-  white-space: nowrap; /* Evita que el texto del botón se rompa en varias líneas */
+  white-space: nowrap;
+  /* Aplicamos la tipografía de texto secundario al botón */
+  font-family: 'Poppins', sans-serif;
 }
 
 .hero-button:hover {
-  background-color: #ffd36e;
+  /* Usamos un tono ligeramente más claro para el hover */
+  background-color: #FFE56B;
 }
 
 /* --- Media Queries para hacer la sección responsive --- */
@@ -85,58 +102,58 @@
 /* Pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
   .hero-content {
-    padding: 15px; /* Menor padding en pantallas pequeñas */
+    padding: 15px;
   }
 
   .hero h1 {
-    font-size: 2.2rem; /* Reduce el tamaño del título */
+    font-size: 2.2rem;
   }
 
   .subtitulo {
-    font-size: 1.2rem; /* Reduce el tamaño del subtítulo */
+    font-size: 1.2rem;
   }
 
   .descripcion {
-    font-size: 0.95rem; /* Reduce el tamaño de la descripción */
+    font-size: 0.95rem;
   }
 
   .hero-button {
-    padding: 12px 25px; /* Reduce el padding del botón */
-    font-size: 0.9rem; /* Reduce el tamaño de la fuente del botón */
+    padding: 12px 25px;
+    font-size: 0.9rem;
   }
 }
 
 /* Pantallas aún más pequeñas (celulares pequeños) */
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 1.8rem; /* Tamaño de título más pequeño */
+    font-size: 1.8rem;
   }
 
   .subtitulo {
-    font-size: 1rem; /* Tamaño de subtítulo más pequeño */
+    font-size: 1rem;
   }
 
   .descripcion {
-    font-size: 0.85rem; /* Tamaño de descripción más pequeño */
+    font-size: 0.85rem;
   }
 
   .hero-button {
-    padding: 10px 20px; /* Padding del botón más pequeño */
-    font-size: 0.85rem; /* Tamaño de fuente del botón más pequeño */
+    padding: 10px 20px;
+    font-size: 0.85rem;
   }
 }
 
 /* Pantallas medianas (tabletas y algunos laptops) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero h1 {
-    font-size: 2.7rem; /* Ajuste para pantallas medianas */
+    font-size: 2.7rem;
   }
 
   .subtitulo {
-    font-size: 1.4rem; /* Ajuste para pantallas medianas */
+    font-size: 1.4rem;
   }
 
   .descripcion {
-    font-size: 1rem; /* Ajuste para pantallas medianas */
+    font-size: 1rem;
   }
 }

@@ -1,103 +1,132 @@
 /* src/styles/Contacto.css */
-.contacto {
-    padding: 100px 20px;
-    background: linear-gradient(180deg, #fffefc 0%, #fef8ef 100%);
-    text-align: center;
-  }
-  
-  .contacto-box {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 50px 30px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  }
-  
-  .contacto h2 {
-    font-size: 2.5rem;
-    color: #f9b233;
-    margin-bottom: 10px;
-  }
-  
-  .contacto-subtitulo {
-    font-size: 1.1rem;
-    color: #444;
-    margin-bottom: 30px;
-  }
-  
-  .contacto-info {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
-  }
-  
-  .contacto-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .contacto-icon {
-    font-size: 1.3rem;
-    color: #f9b233;
-  }
-  
-  .btn-contacto-wpp {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #25d366;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-contacto-wpp:hover {
-    background-color: #1ebc59;
-  }
-  
-  .wpp-icon {
-    font-size: 1.2rem;
-  }
 
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 30px;
+/* Importa las fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.contacto {
+  padding: 100px 20px;
+  background-color: #d3ccb9; /* Color beige de la marca */
+  text-align: center;
+  color: #333;
+}
+
+.contacto-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 50px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  color: #095272; /* Color azul de la marca para legibilidad */
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.contacto-subtitulo {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.formulario button {
+  background-color: #095272; /* Color azul de la marca */
+  color: #fff;
+  padding: 14px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.formulario button:hover {
+  background-color: #F7E74D; /* Color amarillo de la marca */
+  color: #095272;
+}
+
+.btn-contacto-wpp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-contacto-wpp:hover {
+  background-color: #1ebc59;
+}
+
+.wpp-icon {
+  font-size: 1.2rem;
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 768px) {
+  .contacto {
+    padding: 60px 15px;
   }
-  
+  .contacto-box {
+    padding: 40px 20px;
+  }
+  .contacto h2 {
+    font-size: 2.2rem;
+  }
+  .contacto-subtitulo {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
   .formulario input,
-  .formulario textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-  }
-  
+  .formulario textarea,
+  .btn-contacto-wpp,
   .formulario button {
-    background-color: #f9b233;
-    color: #333;
-    padding: 14px;
-    font-weight: bold;
-    font-size: 1rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 0.95rem;
   }
-  
-  .formulario button:hover {
-    background-color: #ffd36e;
+}
+
+@media (max-width: 480px) {
+  .contacto {
+    padding: 40px 10px;
   }
-  
-  
+  .contacto-box {
+    padding: 30px 15px;
+  }
+  .contacto h2 {
+    font-size: 2rem;
+  }
+  .contacto-subtitulo {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+}

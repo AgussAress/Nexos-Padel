@@ -1,7 +1,12 @@
 /* src/styles/Mision.css */
+
+/* Importa las fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .mision {
-  padding: 100px 20px; /* Padding vertical y horizontal base */
-  background-color: #fef8ef; /* Tono pastel suave */
+  padding: 100px 20px;
+  background-color: #fff8e6; /* Color celeste de la marca */ 
   color: #333;
   text-align: center;
 }
@@ -9,49 +14,53 @@
 .mision-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 15px; /* Añadido padding horizontal para asegurar espacio en bordes */
-  box-sizing: border-box; /* Incluye padding en el ancho total */
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .mision h2 {
-  font-size: 2.5rem; /* Base para el título principal */
-  color: #f9b233;
+  font-size: 2.5rem;
+  color: #095272; /* Color azul de la marca para mayor legibilidad */
   margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .mision-text {
-  font-size: 1.1rem; /* Base para el texto de la misión */
+  font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  /* Asegura que el texto no se extienda demasiado en pantallas muy anchas si el max-width del container es mayor */
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mision-text strong {
+  font-weight: 700;
+  color: #095272; /* CAMBIO CLAVE: Usamos el color azul de la marca para el texto destacado */
 }
 
 /* --- Media Queries para hacer la sección responsive --- */
 
-/* Pantallas medianas (tabletas y algunos laptops) */
 @media (max-width: 992px) {
   .mision {
-    padding: 80px 15px; /* Reduce el padding general */
+    padding: 80px 15px;
   }
 
   .mision h2 {
-    font-size: 2.2rem; /* Reduce el tamaño del título */
+    font-size: 2.2rem;
     margin-bottom: 1.2rem;
   }
 
   .mision-text {
-    font-size: 1rem; /* Reduce el tamaño del texto */
+    font-size: 1rem;
     margin-bottom: 1.2rem;
   }
 }
 
-/* Pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
   .mision {
-    padding: 60px 10px; /* Reduce aún más el padding */
+    padding: 60px 10px;
   }
 
   .mision h2 {
@@ -60,13 +69,12 @@
   }
 
   .mision-text {
-    font-size: 0.95rem; /* Reduce el tamaño del texto para móviles */
+    font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1rem;
   }
 }
 
-/* Pantallas aún más pequeñas (celulares muy pequeños) */
 @media (max-width: 480px) {
   .mision {
     padding: 40px 10px;

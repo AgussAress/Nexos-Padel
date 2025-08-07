@@ -1,10 +1,11 @@
 /* src/styles/Navbar.css */
+/* La importación de fuentes se hará en un archivo global para evitar duplicación */
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white;
-  /* Reducimos el padding para que el navbar sea más compacto */
+  background-color: #FFFFFF; /* Color blanco de la marca */
   padding: 1px 30px; 
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -17,7 +18,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* El padding en el contenedor mantiene los bordes */
   padding: 0 15px; 
 }
 
@@ -30,7 +30,6 @@
 
 /* Estilos para la imagen del logo */
 .logo-img {
-  /* Aumentamos la altura para que el logo se vea grande y destacado */
   height: 60px; 
   width: auto;
   transition: all 0.3s ease;
@@ -48,20 +47,21 @@
 
 .navbar-links li a {
   text-decoration: none;
-  color: #333;
+  color: #095272; /* CAMBIO: Color azul de la marca para el texto principal */
   font-weight: 500;
   transition: color 0.3s ease;
+  font-family: 'Playfair Display', serif;
 }
 
 .navbar-links li a:hover {
-  color: #f9b233;
+  color: #F7E74D; /* CAMBIO: Color amarillo de la marca para el hover */
 }
 
 /* Icono de menú hamburguesa */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
-  color: #f9b233;
+  color: #095272; /* CAMBIO: Color azul de la marca para el icono */
   cursor: pointer;
   z-index: 1001;
 }
@@ -69,7 +69,6 @@
 /* --- Media Query para dispositivos móviles y tabletas --- */
 @media (max-width: 900px) {
   .navbar {
-    /* Ajustamos el padding del navbar para móviles */
     padding: 10px 20px;
   }
   
@@ -84,7 +83,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
+    background-color: #FFFFFF; /* Color blanco de la marca */
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     padding: 20px 0;
     text-align: center;
@@ -108,6 +107,8 @@
     font-size: 1.1rem;
     padding: 10px 0;
     display: block;
+    font-family: 'Playfair Display', serif;
+    color: #095272; /* CAMBIO: Color azul de la marca para el texto */
   }
 
   .menu-toggle {
@@ -123,7 +124,7 @@
 /* Media Query para pantallas aún más pequeñas (celulares muy pequeños) */
 @media (max-width: 480px) {
   .navbar {
-    padding: 8px 15px; /* Padding reducido para celulares */
+    padding: 8px 15px;
   }
 
   .navbar-container {
@@ -131,7 +132,7 @@
   }
 
   .logo-img {
-    height: 40px; /* Mantiene un tamaño decente para el logo */
+    height: 40px;
   }
 
   .menu-toggle {
@@ -140,5 +141,6 @@
 
   .navbar-links li a {
     font-size: 1rem;
+    font-family: 'Playfair Display', serif;
   }
 }

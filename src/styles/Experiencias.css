@@ -1,8 +1,10 @@
 /* src/styles/Experiencias.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .experiencias {
   padding: 100px 20px;
-  background-color: #fef9f1;
+  background-color: #E1DAC7; /* Color beige de la marca */
   color: #333;
   text-align: center;
 }
@@ -16,8 +18,9 @@
 
 .experiencias h2 {
   font-size: 2.5rem;
-  color: #f9b233;
+  color: #095272; /* Color azul de la marca para títulos */
   margin-bottom: 2.5rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .cards {
@@ -35,6 +38,7 @@
   transition: transform 0.3s ease;
   overflow: hidden;
   box-sizing: border-box;
+  background-color: #FFFFFF; /* Fondo blanco para las tarjetas */
 }
 
 .card:hover {
@@ -50,26 +54,15 @@
   box-sizing: border-box;
 }
 
-/* CAMBIO: Ajustamos el selector para alternar el orden. 
-  Ahora usamos nth-child(2) para la segunda tarjeta y nth-child(odd) para las impares
-*/
-.card:nth-child(odd) .card-content { 
-  flex-direction: row; /* La primera y la tercera (impares) tendrán el orden normal */
+/* Alterna el orden de imagen/texto en tarjetas impares (1ª, 3ª, etc.) */
+.card:nth-child(odd) .card-content {
+  flex-direction: row;
 }
 
+/* Alterna el orden de imagen/texto en tarjetas pares (2ª, 4ª, etc.) */
 .card:nth-child(even) .card-content {
-  flex-direction: row-reverse; /* La segunda tarjeta tendrá el orden invertido */
+  flex-direction: row-reverse;
 }
-
-/* También necesitamos ajustar el texto para la primera y tercera tarjeta */
-.card:nth-child(odd) .texto {
-  text-align: left;
-}
-/* y para la segunda */
-.card:nth-child(even) .texto {
-  text-align: left;
-}
-
 
 .texto {
   flex: 1 1 55%;
@@ -79,7 +72,7 @@
 
 .icono {
   font-size: 2rem;
-  color: #f9b233;
+  color: #F7E74D; /* Color amarillo de la marca como acento */
   margin-bottom: 10px;
   flex-shrink: 0;
 }
@@ -87,12 +80,14 @@
 .card h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
-  color: #f9b233;
+  color: #095272; /* Color azul de la marca para subtítulos */
+  font-family: 'Playfair Display', serif;
 }
 
 .card p {
   font-size: 1.05rem;
   line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
 }
 
 .experiencia-imagen {
@@ -112,64 +107,39 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Colores diferenciados */
-.team-building {
-  background-color: #f3faff; /* Un color azul claro para diferenciarla */
-}
-
-/* Añadimos un color de fondo para la nueva tarjeta de clínicas */
-.clinicas {
-  background-color: #fff4e2; /* Un color azul claro para diferenciarla */
-}
-
-.fidelizacion {
-  background-color: #e9f5ff; 
-}
-
 /* --- Media Queries para hacer la sección responsive --- */
-/* NOTA: No es necesario ajustar los media queries, ya que el diseño se adapta a la nueva estructura */
 
 @media (max-width: 992px) {
   .experiencias {
     padding: 80px 15px;
   }
-
   .experiencias h2 {
     font-size: 2.2rem;
     margin-bottom: 2rem;
   }
-
   .card {
     max-width: 90%;
   }
-
   .card-content {
     flex-direction: column;
     align-items: center;
     padding: 25px;
     gap: 25px;
   }
-  
-  /* Ahora todas las tarjetas apilan el contenido */
   .card:nth-child(odd) .card-content,
   .card:nth-child(even) .card-content {
     flex-direction: column;
   }
-  
-  /* Ahora todos los textos se centran al apilar */
   .texto {
     text-align: center;
     min-width: unset;
   }
-
   .card h3 {
     font-size: 1.3rem;
   }
-
   .card p {
     font-size: 1rem;
   }
-  
   .experiencia-imagen {
     height: 220px;
     min-width: unset;
@@ -177,63 +147,50 @@
   }
 }
 
-/* Pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
   .experiencias {
     padding: 60px 10px;
   }
-
   .experiencias h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
-
   .card-content {
     padding: 20px;
     gap: 20px;
   }
-
   .card h3 {
     font-size: 1.2rem;
   }
-
   .card p {
     font-size: 0.95rem;
     line-height: 1.5;
   }
-
   .experiencia-imagen {
     height: 180px;
     max-width: 90%;
   }
 }
 
-/* Pantallas aún más pequeñas (celulares muy pequeños) */
 @media (max-width: 480px) {
   .experiencias {
     padding: 40px 10px;
   }
-
   .experiencias h2 {
     font-size: 1.8rem;
   }
-
   .card-content {
     padding: 15px;
   }
-
   .card h3 {
     font-size: 1.1rem;
   }
-
   .card p {
     font-size: 0.9rem;
   }
-
   .icono {
     font-size: 1.8rem;
   }
-
   .experiencia-imagen {
     height: 150px;
     max-width: 95%;

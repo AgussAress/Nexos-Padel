@@ -1,12 +1,15 @@
 /* src/styles/Servicios.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .servicios {
   padding: 100px 20px;
-  background-color: #fef9f1;
-  color: #333;
+  background-color: #E1DAC7; /* Color beige de la marca */
+  color: #333; /* Color de texto general */
 }
 
 .servicios-container {
-  max-width: 1100px; /* Mantener este max-width para el contenedor principal */
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
   padding: 0 15px;
@@ -15,8 +18,9 @@
 
 .servicios h2 {
   font-size: 2.5rem;
-  color: #f9b233;
+  color: #095272; /* CAMBIO: Color azul de la marca para mayor legibilidad */
   margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .intro {
@@ -26,12 +30,12 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .servicios-grid {
   display: grid;
-  /* CAMBIO AQUÍ: Minmax ligeramente más pequeño para permitir 4 columnas en más rangos */
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Reducido de 280px a 240px */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
   justify-content: center;
 }
@@ -59,29 +63,31 @@
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 3px solid #f9b233;
+  border: 3px solid #F7E74D; /* Color amarillo de la marca como acento */
   flex-shrink: 0;
 }
 
-
 .servicio-card h4 {
   font-size: 1.2rem;
-  color: #f9b233;
+  color: #095272; /* CAMBIO: Color azul de la marca para mayor legibilidad */
   margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
 }
 
 .servicio-card p {
   font-size: 1rem;
   line-height: 1.6;
   flex-grow: 1;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* --- Media Queries ... (el resto del código se mantiene igual) --- */
 /* --- Media Queries para ajustar tamaños de fuente y padding --- */
 
 /* Pantallas grandes (escritorio), asegura 4 columnas */
-@media (min-width: 1025px) { /* A partir de 1025px de ancho */
+@media (min-width: 1025px) {
   .servicios-grid {
-    grid-template-columns: repeat(4, 1fr); /* Fuerza 4 columnas iguales */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -130,7 +136,7 @@
   }
 
   .servicios-grid {
-    grid-template-columns: 1fr; /* Una columna única en móviles muy pequeños */
+    grid-template-columns: 1fr;
   }
 
   .servicio-card {
@@ -151,5 +157,4 @@
   .intro {
     font-size: 1.1rem;
   }
-  /* En este rango, el minmax(240px, 1fr) debería permitir 3 o 2 columnas dependiendo del ancho */
 }

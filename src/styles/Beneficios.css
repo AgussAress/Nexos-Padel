@@ -1,7 +1,12 @@
 /* src/styles/Beneficios.css */
+
+/* Importa las fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .beneficios {
   padding: 100px 20px;
-  background-color: #ffffff;
+  background-color: #E1DAC7; /* Color beige de la marca */
   color: #333;
   text-align: center;
 }
@@ -9,14 +14,15 @@
 .beneficios-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 15px; 
+  padding: 0 15px;
   box-sizing: border-box;
 }
 
 .beneficios h2 {
   font-size: 2.5rem;
-  color: #f9b233;
+  color: #095272; /* Color azul de la marca para legibilidad */
   margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .beneficios-grid {
@@ -27,11 +33,11 @@
 }
 
 .beneficio-card {
-  background: #fef8ef;
+  background: #FFFFFF; /* Fondo blanco para las tarjetas */
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,24 +49,27 @@
 .beneficio-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  background-color: #fff6e6;
+  background-color: #f9f9f9; /* Un blanco un poco más oscuro para el hover */
 }
 
 .icono {
   font-size: 2rem;
-  color: #f9b233;
+  color: #F7E74D; /* Color amarillo de la marca como acento */
   margin-bottom: 15px;
 }
 
 .beneficio-card h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #095272; /* Color azul de la marca para títulos */
+  font-family: 'Playfair Display', serif;
 }
 
 .beneficio-card p {
   font-size: 1rem;
   line-height: 1.6;
   flex-grow: 1;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* --- Media Queries para hacer la sección responsive --- */
