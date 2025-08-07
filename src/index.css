@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* src/index.css */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: #333;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  html, body {
+    overflow-x: hidden; /* **Clave para evitar el scroll horizontal** */
+    width: 100%; /* Asegura que el body ocupe el 100% del ancho disponible */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial para que el padding y el borde no aumenten el ancho */
+  }
+ 
+  section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f9b233;
+    text-align: center;
+  }
+  
+  section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+    

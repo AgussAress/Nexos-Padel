@@ -1,0 +1,155 @@
+/* src/styles/Servicios.css */
+.servicios {
+  padding: 100px 20px;
+  background-color: #fef9f1;
+  color: #333;
+}
+
+.servicios-container {
+  max-width: 1100px; /* Mantener este max-width para el contenedor principal */
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.servicios h2 {
+  font-size: 2.5rem;
+  color: #f9b233;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+.servicios-grid {
+  display: grid;
+  /* CAMBIO AQUÍ: Minmax ligeramente más pequeño para permitir 4 columnas en más rangos */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Reducido de 280px a 240px */
+  gap: 30px;
+  justify-content: center;
+}
+
+.servicio-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #f9b233;
+  flex-shrink: 0;
+}
+
+
+.servicio-card h4 {
+  font-size: 1.2rem;
+  color: #f9b233;
+  margin-bottom: 10px;
+}
+
+.servicio-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* --- Media Queries para ajustar tamaños de fuente y padding --- */
+
+/* Pantallas grandes (escritorio), asegura 4 columnas */
+@media (min-width: 1025px) { /* A partir de 1025px de ancho */
+  .servicios-grid {
+    grid-template-columns: repeat(4, 1fr); /* Fuerza 4 columnas iguales */
+  }
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  .servicios {
+    padding: 60px 15px;
+  }
+
+  .servicios h2 {
+    font-size: 2rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .servicios-grid {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .servicio-card {
+    padding: 20px 15px;
+  }
+
+  .servicio-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .servicio-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Pantallas aún más pequeñas (celulares pequeños) */
+@media (max-width: 480px) {
+  .servicios h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr; /* Una columna única en móviles muy pequeños */
+  }
+
+  .servicio-card {
+    padding: 18px 12px;
+  }
+}
+
+/* Pantallas medianas (tabletas y algunos laptops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .servicios {
+    padding: 80px 20px;
+  }
+
+  .servicios h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+  }
+  /* En este rango, el minmax(240px, 1fr) debería permitir 3 o 2 columnas dependiendo del ancho */
+}

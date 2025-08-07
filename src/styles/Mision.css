@@ -1,0 +1,83 @@
+/* src/styles/Mision.css */
+.mision {
+  padding: 100px 20px; /* Padding vertical y horizontal base */
+  background-color: #fef8ef; /* Tono pastel suave */
+  color: #333;
+  text-align: center;
+}
+
+.mision-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px; /* Añadido padding horizontal para asegurar espacio en bordes */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.mision h2 {
+  font-size: 2.5rem; /* Base para el título principal */
+  color: #f9b233;
+  margin-bottom: 1.5rem;
+}
+
+.mision-text {
+  font-size: 1.1rem; /* Base para el texto de la misión */
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  /* Asegura que el texto no se extienda demasiado en pantallas muy anchas si el max-width del container es mayor */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Media Queries para hacer la sección responsive --- */
+
+/* Pantallas medianas (tabletas y algunos laptops) */
+@media (max-width: 992px) {
+  .mision {
+    padding: 80px 15px; /* Reduce el padding general */
+  }
+
+  .mision h2 {
+    font-size: 2.2rem; /* Reduce el tamaño del título */
+    margin-bottom: 1.2rem;
+  }
+
+  .mision-text {
+    font-size: 1rem; /* Reduce el tamaño del texto */
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  .mision {
+    padding: 60px 10px; /* Reduce aún más el padding */
+  }
+
+  .mision h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .mision-text {
+    font-size: 0.95rem; /* Reduce el tamaño del texto para móviles */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Pantallas aún más pequeñas (celulares muy pequeños) */
+@media (max-width: 480px) {
+  .mision {
+    padding: 40px 10px;
+  }
+
+  .mision h2 {
+    font-size: 1.8rem;
+  }
+
+  .mision-text {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+}

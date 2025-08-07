@@ -1,0 +1,158 @@
+/* src/styles/Metodologia.css */
+.metodologia {
+  padding: 100px 20px; /* Padding vertical y horizontal base */
+  background-color: #fef8ef;
+  color: #333;
+  text-align: center;
+  overflow-x: hidden; /* Previene scroll lateral */
+}
+
+.metodologia-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px; /* Añadido padding horizontal para asegurar espacio en bordes */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.metodologia h2 {
+  font-size: 2.5rem; /* Base para el título principal */
+  color: #f9b233;
+  margin-bottom: 2rem;
+}
+
+.pasos {
+  display: flex;
+  flex-direction: column; /* Apila los pasos verticalmente */
+  gap: 40px;
+  align-items: center; /* Centra los pasos horizontalmente */
+}
+
+.paso {
+  display: flex; /* Los elementos dentro de cada paso (icono y texto) se distribuyen horizontalmente */
+  align-items: flex-start; /* Alinea el icono y el texto en la parte superior */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px; /* Padding interno de cada tarjeta de paso */
+  width: 100%; /* Ocupa todo el ancho disponible del .pasos contenedor */
+  max-width: 800px; /* Limita el ancho máximo de cada tarjeta */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  gap: 20px; /* Espacio entre el icono y el texto */
+  box-sizing: border-box; /* Asegura que el padding no añada al ancho total */
+}
+
+.icono {
+  font-size: 2rem; /* Base para el tamaño del icono */
+  color: #f9b233;
+  flex-shrink: 0; /* Evita que el icono se encoja */
+}
+
+.texto h4 {
+  font-size: 1.3rem; /* Base para el título del paso */
+  margin-bottom: 8px;
+}
+
+.texto p {
+  font-size: 1.05rem; /* Base para la descripción del paso */
+  line-height: 1.6;
+}
+
+/* Previene overflow lateral general (esto debería estar en un CSS global si afecta a todo el body,
+   pero lo mantengo aquí ya que lo tenías) */
+body {
+  overflow-x: hidden;
+}
+
+/* --- Media Queries para hacer la sección responsive --- */
+
+/* Pantallas medianas a pequeñas (tabletas y algunos laptops) */
+@media (max-width: 992px) {
+  .metodologia {
+    padding: 80px 15px; /* Reduce el padding general */
+  }
+
+  .metodologia h2 {
+    font-size: 2.2rem; /* Reduce el tamaño del título principal */
+    margin-bottom: 1.8rem;
+  }
+
+  .paso {
+    padding: 20px; /* Reduce el padding interno de cada tarjeta */
+    max-width: 700px; /* Reduce un poco el max-width de la tarjeta */
+    gap: 15px; /* Reduce el espacio entre el icono y el texto */
+  }
+
+  .icono {
+    font-size: 1.8rem; /* Reduce el tamaño del icono */
+  }
+
+  .texto h4 {
+    font-size: 1.2rem; /* Reduce el tamaño del título del paso */
+  }
+
+  .texto p {
+    font-size: 1rem; /* Reduce el tamaño de la descripción del paso */
+  }
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  .metodologia {
+    padding: 60px 10px; /* Reduce aún más el padding general */
+  }
+
+  .metodologia h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .paso {
+    flex-direction: column; /* Apila el icono y el texto dentro de cada paso */
+    align-items: center; /* Centra el icono y el texto al apilarlos */
+    text-align: center; /* Centra el texto dentro del paso */
+    padding: 18px;
+    gap: 10px; /* Reduce el espacio al apilar */
+  }
+
+  .icono {
+    font-size: 1.6rem;
+    margin-bottom: 5px; /* Espacio adicional entre icono y título al apilar */
+  }
+
+  .texto h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .texto p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* Pantallas aún más pequeñas (celulares muy pequeños) */
+@media (max-width: 480px) {
+  .metodologia {
+    padding: 40px 10px;
+  }
+
+  .metodologia h2 {
+    font-size: 1.8rem;
+  }
+
+  .paso {
+    padding: 15px;
+  }
+
+  .icono {
+    font-size: 1.4rem;
+  }
+
+  .texto h4 {
+    font-size: 1rem;
+  }
+
+  .texto p {
+    font-size: 0.9rem;
+  }
+}

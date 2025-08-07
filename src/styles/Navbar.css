@@ -1,0 +1,144 @@
+/* src/styles/Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  /* Reducimos el padding para que el navbar sea más compacto */
+  padding: 1px 30px; 
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* El padding en el contenedor mantiene los bordes */
+  padding: 0 15px; 
+}
+
+.navbar-logo {
+  text-decoration: none;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para la imagen del logo */
+.logo-img {
+  /* Aumentamos la altura para que el logo se vea grande y destacado */
+  height: 60px; 
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+/* Enlaces de escritorio */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #f9b233;
+}
+
+/* Icono de menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #f9b233;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* --- Media Query para dispositivos móviles y tabletas --- */
+@media (max-width: 900px) {
+  .navbar {
+    /* Ajustamos el padding del navbar para móviles */
+    padding: 10px 20px;
+  }
+  
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  /* Estado 'open' para cuando el menú está visible */
+  .navbar-links.open {
+    display: flex;
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .navbar-links li a {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ajusta el tamaño del logo en móviles */
+  .logo-img {
+    height: 45px;
+  }
+}
+
+/* Media Query para pantallas aún más pequeñas (celulares muy pequeños) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 15px; /* Padding reducido para celulares */
+  }
+
+  .navbar-container {
+    padding: 0 10px;
+  }
+
+  .logo-img {
+    height: 40px; /* Mantiene un tamaño decente para el logo */
+  }
+
+  .menu-toggle {
+    font-size: 1.6rem;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+}

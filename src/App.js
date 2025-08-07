@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Nosotros from "./sections/Nosotros";
+import Contacto from "./sections/Contacto";
+import Navbar from "./components/Navbar";
+import Hero from "./sections/Hero";
+import WhatsappButton from "./components/WhatsappButton";
+import Servicios from "./sections/Servicios";
+import Mision from "./sections/Mision";
+import Beneficios from "./sections/Beneficios";
+import PadelHerramienta from "./sections/PadelHerramienta";
+import Metodologia from "./sections/Metodologia";
+import Experiencias from "./sections/Experiencias";
+import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Hero />
+      <Servicios/>
+      <Nosotros/>
+      <Mision/>
+      <Beneficios/>
+      <PadelHerramienta/>
+      <Metodologia/>
+      <Experiencias/>
+
+      <Contacto/>
+      <WhatsappButton />
+      <Footer/>
     </div>
   );
 }

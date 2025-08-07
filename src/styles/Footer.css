@@ -1,0 +1,94 @@
+/* src/styles/Footer.css */
+.footer {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 60px 20px 30px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+  
+  .footer-brand h3 {
+    font-size: 1.6rem;
+    color: #f9b233;
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav h4,
+  .footer-redes h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-nav ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .redes-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .redes-icons a:hover {
+    color: #f9b233;
+  }
+  
+  .footer-whatsapp {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #25d366;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  .footer-whatsapp:hover {
+    background-color: #1ebc59;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .redes-icons {
+      justify-content: center;
+    }
+  }
+  
