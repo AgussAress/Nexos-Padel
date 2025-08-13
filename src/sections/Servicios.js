@@ -28,7 +28,7 @@ const Servicios = () => {
           <div className="servicio-card" data-aos="fade-up" data-aos-delay="300">
             <img src={networkingImg} alt="Networking" className="servicio-img" />
             <h4>Networking + Pádel</h4>
-            <p>Combiná el deporte con oportunidades de conexión real entre colegas o clientes.</p>
+            <p>Combiná el deporte con oportunidades de interacción entre compañeros o clientes.</p>
           </div>
           <div className="servicio-card" data-aos="fade-up" data-aos-delay="400">
             <img src={eventoImg} alt="Evento" className="servicio-img" />
