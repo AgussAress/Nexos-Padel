@@ -13,6 +13,7 @@ import Beneficios from "./sections/Beneficios";
 import PadelHerramienta from "./sections/PadelHerramienta";
 import Metodologia from "./sections/Metodologia";
 import Experiencias from "./sections/Experiencias";
+import Partners from "./sections/Partners";
 import Footer from "./components/Footer";
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
       <PadelHerramienta/>
       <Metodologia/>
       <Experiencias/>
-
+      <Partners/>
       <Contacto/>
       <WhatsappButton />
       <Footer/>

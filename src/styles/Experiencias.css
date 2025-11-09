@@ -107,6 +107,44 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.viajes-detalles {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.detalle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.detalle-icono {
+  font-size: 1.3rem;
+  color: #F7E74D; /* Amarillo marca */
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.card.viajes .experiencia-imagen {
+  height: 550px; /* más alta que las demás (250px por defecto) */
+  max-width: 95%; /* mantiene proporción horizontal */
+}
+
+.card.viajes .experiencia-imagen img {
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
 /* --- Media Queries para hacer la sección responsive --- */
 
 @media (max-width: 992px) {

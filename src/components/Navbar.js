@@ -31,6 +31,7 @@ const Navbar = () => {
           <li><a href="#servicios" onClick={closeMenu}>Servicios</a></li>
           <li><a href="#sobre-nosotros" onClick={closeMenu}>Nosotros</a></li>   
           <li><a href="#beneficios" onClick={closeMenu}>Beneficios</a></li> {/* Agregué Beneficios */}
+          <li><a href="#viajesGrupales" onClick={closeMenu}>Viajes Grupales</a></li>
           <li><a href="#contacto" onClick={closeMenu}>Contacto</a></li>
         </ul>
       </div>

@@ -1,13 +1,21 @@
 // src/components/Experiencias.js
-
 import React from "react";
 import "../styles/Experiencias.css";
-import { FaUsers, FaGift, FaClipboardList } from "react-icons/fa"; 
-// Importé dos nuevos iconos para darte opciones, FaFutbol o FaClipboardList podrían funcionar
+import { 
+  FaUsers, 
+  FaGift, 
+  FaClipboardList, 
+  FaPlaneDeparture, 
+  FaShuttleVan, 
+  FaTableTennis, 
+  FaLightbulb, 
+  FaGlobeAmericas, 
+  FaBoxOpen 
+} from "react-icons/fa"; 
 import teamImg from "../assets/catering.jpg";
 import clientesImg from "../assets/morfando.jpeg";
-// Asegúrate de tener una imagen para esta sección. Si no, renombra una existente temporalmente.
-import clinicasImg from "../assets/clinicas.jpg"; 
+import clinicasImg from "../assets/clinicas.jpg";
+import canchasPadel from "../assets/canchasPadel.jpg";
 
 const Experiencias = () => {
   return (
@@ -15,15 +23,16 @@ const Experiencias = () => {
       <div className="experiencias-container" data-aos="fade-up">
         <h2>Tipos de Experiencias</h2>
         <div className="cards">
-          {/* PRIMERA TARJETA: TEAM BUILDING */}
+          
+          {/* TEAM BUILDING */}
           <div className="card team-building" data-aos="fade-right">
             <div className="card-content">
               <div className="texto">
                 <div className="icono"><FaUsers /></div>
                 <h3>Team Building</h3>
                 <p>
-                  Ofrecemos una experiencia integral de pádel y gastronomía diseñada para ir más allá de la diversión, 
-                  el propósito principal es fortalecer lazos, mejorar la comunicación y potenciar el espíritu de equipo de una manera única y efectiva.
+                  Ofrecemos una experiencia integral de pádel y gastronomía diseñada para ir más allá de la diversión. 
+                  El propósito principal es fortalecer lazos, mejorar la comunicación y potenciar el espíritu de equipo de una manera única y efectiva.
                 </p>
               </div>
               <div className="experiencia-imagen">
@@ -32,15 +41,15 @@ const Experiencias = () => {
             </div>
           </div>
 
-          {/* SEGUNDA TARJETA: CLÍNICAS DE PÁDEL (NUEVA) */}
-          <div className="card clinicas" data-aos="fade-left"> {/* Añadimos la nueva clase "clinicas" */}
+          {/* CLÍNICAS DE PÁDEL */}
+          <div className="card clinicas" data-aos="fade-left">
             <div className="card-content">
               <div className="texto">
-                <div className="icono"><FaClipboardList /></div> {/* Puedes cambiar FaFutbol por FaClipboardList o cualquier otro icono que te guste */}
+                <div className="icono"><FaClipboardList /></div>
                 <h3>Clínicas de Pádel</h3>
                 <p>
                   Para mejorar el rendimiento de tu equipo, nos adaptamos a las necesidades de tu empresa, 
-                  te ayudamos a transformar la dinámica a través de diferentes situaciones de juego y actividades en un ambiente relajado y lúdico.
+                  ayudándote a transformar la dinámica a través de diferentes situaciones de juego y actividades en un ambiente relajado y lúdico.
                 </p>
               </div>
               <div className="experiencia-imagen">
@@ -49,8 +58,8 @@ const Experiencias = () => {
             </div>
           </div>
           
-          {/* TERCERA TARJETA: FIDELIZACIÓN DE CLIENTES */}
-          <div className="card fidelizacion" data-aos="fade-right"> {/* Cambiamos la animación a fade-right para que se vea bien en el orden */}
+          {/* FIDELIZACIÓN DE CLIENTES */}
+          <div className="card fidelizacion" data-aos="fade-right">
             <div className="card-content">
               <div className="texto">
                 <div className="icono"><FaGift /></div>
@@ -62,6 +71,46 @@ const Experiencias = () => {
               </div>
               <div className="experiencia-imagen">
                 <img src={clientesImg} alt="Fidelización" />
+              </div>
+            </div>
+          </div>
+
+          {/* VIAJES GRUPALES CORPORATIVOS */}
+          <div id="viajesGrupales" className="card viajes" data-aos="fade-left">
+            <div className="card-content">
+              <div className="texto">
+                {/* <div className="icono"><FaTripadvisor /></div> */}
+                
+                <h3>Viajes Grupales Corporativos – Soluciones Integrales</h3>
+                <p>
+                  Nos especializamos en el diseño y ejecución de viajes grupales y eventos “llave en mano” personalizados 
+                  según los objetivos de cada organización. Garantizamos una experiencia fluida y memorable desde el comienzo hasta el fin.
+                </p>
+
+                <div className="viajes-detalles">
+                  <div className="detalle"><FaPlaneDeparture className="detalle-icono"/> 
+                    <div><strong>Selección de destino:</strong> Asesoramos en la elección del destino más adecuado en función de los objetivos del grupo, sus intereses y preferencias. Ya sea una ciudad, un club deportivo o un hotel, proponemos espacios que potencien la experiencia colectiva.</div>
+                  </div>
+                  <div className="detalle"><FaShuttleVan className="detalle-icono"/> 
+                    <div><strong>Coordinación logística:</strong> Desde el momento de llegada, gestionamos todos los traslados y aspectos operativos del viaje. El grupo solo debe enfocarse en disfrutar y aprovechar cada instancia.</div>
+                  </div>
+                  <div className="detalle"><FaTableTennis className="detalle-icono"/> 
+                    <div><strong>Programa de Pádel:</strong> Diseñamos experiencias deportivas adaptadas a la duración del viaje y a los objetivos del equipo. Ofrecemos desde jornadas intensivas hasta semanas completas de entrenamiento y juego.</div>
+                  </div>
+                  <div className="detalle"><FaLightbulb className="detalle-icono"/> 
+                    <div><strong>Motivación y desarrollo grupal:</strong> Complementamos la actividad deportiva con espacios de reflexión y aprendizaje. Junto a nuestros mentores, facilitamos sesiones grupales y clínicas orientadas a abordar desafíos reales, fortalecer vínculos y promover el trabajo en equipo.</div>
+                  </div>
+                  <div className="detalle"><FaGlobeAmericas className="detalle-icono"/> 
+                    <div><strong>Conexión con la cultura local:</strong> Cada destino ofrece una identidad única. Incorporamos actividades típicas, gastronomía regional y espacios de esparcimiento que permiten conectar con lo auténtico y enriquecer la vivencia.</div>
+                  </div>
+                  <div className="detalle"><FaBoxOpen className="detalle-icono"/> 
+                    <div><strong>Servicios complementarios:</strong> Ofrecemos welcome packs, cobertura audiovisual, merchandising personalizado y otros recursos que transforman un buen evento en una experiencia inolvidable.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="experiencia-imagen">
+                <img src={canchasPadel} alt="Viajes Grupales Corporativos" />
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ const Contacto = () => {
           method="POST"
           className="formulario"
         >
-          <input type="hidden" name="_next" value="https://nexospadel.com.ar/gracias.html" />
+          <input type="hidden" name="_next" value="https://nexospadel.com/gracias.html" />
           <input type="hidden" name="_captcha" value="false" />
 
           <input
