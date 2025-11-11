@@ -1,3 +1,4 @@
+/* src/styles/Partners.css */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -51,17 +52,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* antes 30px */
+    gap: 20px;
   }
   
   .partner-card {
     background-color: #E1DAC7; /* Beige marca */
     border-radius: 14px;
-    padding: 25px 20px; /* más compacto */
-    max-width: 300px; /* antes 350px */
+    padding: 25px 20px;
+    /* Ajustamos el max-width para que quepan 4 tarjetas en 1200px con un gap de 20px */
+    /* (1200px - 3*20px de gap) / 4 = 285px por tarjeta. Usaremos un poco menos para seguridad */
+    max-width: 237px; /* Reducido para que entren 4 en una fila */
     width: 100%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: left;
+    text-align: center;
     transition: transform 0.3s ease;
   }
   
@@ -69,10 +72,22 @@
     transform: translateY(-5px);
   }
 
-.partner-icon {
-  font-size: 2rem;
-  color: #F7E74D;
-  margin-bottom: 15px;
+.partner-img-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #095272, 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .partner-card h3 {
@@ -86,7 +101,7 @@
   color: #333;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-weight: 500;
 }
 
@@ -95,9 +110,23 @@
   line-height: 1.6;
   color: #444;
   font-family: 'Poppins', sans-serif;
+  text-align: left;
+  margin-bottom: 12px;
+}
+.partner-card p:last-child {
+    margin-bottom: 0;
 }
 
 /* Responsive */
+@media (max-width: 1150px) { /* Ajustamos el breakpoint para que se rompa antes de que se apilen */
+  .partners-cards {
+    gap: 20px; /* Puedes ajustar este gap si necesitas más espacio */
+  }
+  .partner-card {
+    max-width: 300px; /* Vuelve a 300px cuando ya no caben 4 */
+  }
+}
+
 @media (max-width: 992px) {
   .partners {
     padding: 80px 15px;
@@ -119,7 +148,14 @@
   }
   .partner-card {
     max-width: 90%;
+  }
+  .partner-card h3, 
+  .partner-card h4, 
+  .partner-card p {
     text-align: center;
+  }
+  .partner-card p {
+    text-align: left;
   }
 }
 

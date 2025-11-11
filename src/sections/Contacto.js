@@ -8,15 +8,16 @@ const Contacto = () => {
     <section id="contacto" className="contacto">
       <div className="contacto-box" data-aos="fade-up">
         <h2>Contacto</h2>
-        <p className="contacto-subtitulo">Conectemos para crear una experiencia única</p>
+        <p className="contacto-subtitulo">
+          Conectemos para crear una experiencia única
+        </p>
 
         <form 
-          action="https://formsubmit.co/nexospadel@gmail.com" 
+          action="https://formspree.io/f/mvgdozrq" // ⚠️ reemplazá con tu endpoint
           method="POST"
           className="formulario"
         >
           <input type="hidden" name="_next" value="https://nexospadel.com/gracias.html" />
-          <input type="hidden" name="_captcha" value="false" />
 
           <input
             type="text"

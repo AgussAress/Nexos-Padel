@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Nexos Padel Team. Todos los derechos reservados.</p>
+        <p>© {new Date().getFullYear()} Nexos Padel. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

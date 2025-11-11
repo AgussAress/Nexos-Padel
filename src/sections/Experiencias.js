@@ -1,4 +1,4 @@
-// src/components/Experiencias.js
+// src/sections/Experiencias.js
 import React from "react";
 import "../styles/Experiencias.css";
 import { 
@@ -75,42 +75,68 @@ const Experiencias = () => {
             </div>
           </div>
 
-          {/* VIAJES GRUPALES CORPORATIVOS */}
+          {/* VIAJES GRUPALES CORPORATIVOS - ESTRUCTURA MODIFICADA */}
           <div id="viajesGrupales" className="card viajes" data-aos="fade-left">
-            <div className="card-content">
-              <div className="texto">
-                {/* <div className="icono"><FaTripadvisor /></div> */}
-                
-                <h3>Viajes Grupales Corporativos – Soluciones Integrales</h3>
-                <p>
-                  Nos especializamos en el diseño y ejecución de viajes grupales y eventos “llave en mano” personalizados 
-                  según los objetivos de cada organización. Garantizamos una experiencia fluida y memorable desde el comienzo hasta el fin.
-                </p>
+            
+            {/* Título y descripción inicial */}
+            <div className="viajes-header">
+              <h3>Viajes Grupales Corporativos – Soluciones Integrales</h3>
+              <p>
+                Nos especializamos en el diseño y ejecución de viajes grupales y eventos “llave en mano” personalizados 
+                según los objetivos de cada organización. Garantizamos una experiencia fluida y memorable desde el comienzo hasta el fin.
+              </p>
+            </div>
+            
+            {/* Imagen */}
+            {/* 
+              <div className="viajes-imagen-principal">
+              <img src={canchasPadel} alt="Viajes Grupales Corporativos" />
+            </div>
+            */}
+            
 
-                <div className="viajes-detalles">
-                  <div className="detalle"><FaPlaneDeparture className="detalle-icono"/> 
-                    <div><strong>Selección de destino:</strong> Asesoramos en la elección del destino más adecuado en función de los objetivos del grupo, sus intereses y preferencias. Ya sea una ciudad, un club deportivo o un hotel, proponemos espacios que potencien la experiencia colectiva.</div>
-                  </div>
-                  <div className="detalle"><FaShuttleVan className="detalle-icono"/> 
-                    <div><strong>Coordinación logística:</strong> Desde el momento de llegada, gestionamos todos los traslados y aspectos operativos del viaje. El grupo solo debe enfocarse en disfrutar y aprovechar cada instancia.</div>
-                  </div>
-                  <div className="detalle"><FaTableTennis className="detalle-icono"/> 
-                    <div><strong>Programa de Pádel:</strong> Diseñamos experiencias deportivas adaptadas a la duración del viaje y a los objetivos del equipo. Ofrecemos desde jornadas intensivas hasta semanas completas de entrenamiento y juego.</div>
-                  </div>
-                  <div className="detalle"><FaLightbulb className="detalle-icono"/> 
-                    <div><strong>Motivación y desarrollo grupal:</strong> Complementamos la actividad deportiva con espacios de reflexión y aprendizaje. Junto a nuestros mentores, facilitamos sesiones grupales y clínicas orientadas a abordar desafíos reales, fortalecer vínculos y promover el trabajo en equipo.</div>
-                  </div>
-                  <div className="detalle"><FaGlobeAmericas className="detalle-icono"/> 
-                    <div><strong>Conexión con la cultura local:</strong> Cada destino ofrece una identidad única. Incorporamos actividades típicas, gastronomía regional y espacios de esparcimiento que permiten conectar con lo auténtico y enriquecer la vivencia.</div>
-                  </div>
-                  <div className="detalle"><FaBoxOpen className="detalle-icono"/> 
-                    <div><strong>Servicios complementarios:</strong> Ofrecemos welcome packs, cobertura audiovisual, merchandising personalizado y otros recursos que transforman un buen evento en una experiencia inolvidable.</div>
-                  </div>
+            {/* Subtítulo de detalles */}
+            <div className="viajes-subheader">
+              <h4>¿Cómo organizamos estos viajes?</h4>
+            </div>
+
+            {/* Detalles en formato tabla/grid de 2 columnas */}
+            <div className="viajes-detalles">
+              <div className="detalle">
+                <div className="detalle-icono"><FaPlaneDeparture /></div>
+                <div>
+                  <strong>Selección de destino:</strong> Asesoramos en la elección del destino más adecuado en función de los objetivos del grupo, sus intereses y preferencias. Ya sea una ciudad, un club deportivo o un hotel, proponemos espacios que potencien la experiencia colectiva.
                 </div>
               </div>
-
-              <div className="experiencia-imagen">
-                <img src={canchasPadel} alt="Viajes Grupales Corporativos" />
+              <div className="detalle">
+                <div className="detalle-icono"><FaShuttleVan /></div>
+                <div>
+                  <strong>Coordinación logística:</strong> Desde el momento de llegada, gestionamos todos los traslados y aspectos operativos del viaje. El grupo solo debe enfocarse en disfrutar y aprovechar cada instancia.
+                </div>
+              </div>
+              <div className="detalle">
+                <div className="detalle-icono"><FaTableTennis /></div>
+                <div>
+                  <strong>Programa de Pádel:</strong> Diseñamos experiencias deportivas adaptadas a la duración del viaje y a los objetivos del equipo. Ofrecemos desde jornadas intensivas hasta semanas completas de entrenamiento y juego.
+                </div>
+              </div>
+              <div className="detalle">
+                <div className="detalle-icono"><FaLightbulb /></div>
+                <div>
+                  <strong>Motivación y desarrollo grupal:</strong> Complementamos la actividad deportiva con espacios de reflexión y aprendizaje. Junto a nuestros mentores, facilitamos sesiones grupales y clínicas orientadas a abordar desafíos reales, fortalecer vínculos y promover el trabajo en equipo.
+                </div>
+              </div>
+              <div className="detalle">
+                <div className="detalle-icono"><FaGlobeAmericas /></div>
+                <div>
+                  <strong>Conexión con la cultura local:</strong> Cada destino ofrece una identidad única. Incorporamos actividades típicas, gastronomía regional y espacios de esparcimiento que permiten conectar con lo auténtico y enriquecer la vivencia.
+                </div>
+              </div>
+              <div className="detalle">
+                <div className="detalle-icono"><FaBoxOpen /></div>
+                <div>
+                  <strong>Servicios complementarios:</strong> Ofrecemos welcome packs, cobertura audiovisual, merchandising personalizado y otros recursos que transforman un buen evento en una experiencia inolvidable.
+                </div>
               </div>
             </div>
           </div>

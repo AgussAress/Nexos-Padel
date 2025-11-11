@@ -6,7 +6,7 @@ import { FaRegComments, FaLightbulb, FaCogs, FaCheckCircle } from "react-icons/f
 const pasos = [
   {
     icon: <FaRegComments />,
-    titulo: "Escuchamos tu propuesta",
+    titulo: "Escuchamos tu necesidad",
     descripcion: "Conocemos a tu empresa, entendemos tus objetivos y analizamos qué tipo de experiencia necesitás."
   },
   {

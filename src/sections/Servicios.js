@@ -17,7 +17,7 @@ const Servicios = () => {
         <div className="servicios-grid">
           <div className="servicio-card" data-aos="fade-up" data-aos-delay="100">
             <img src={torneoImg} alt="Torneo" className="servicio-img" />
-            <h4>Torneos Intra Empresariales</h4>
+            <h4>Torneos Intraempresariales</h4>
             <p>Fomentá la competencia sana y el compañerismo entre colaboladores o empresas aliadas.</p>
           </div>
           <div className="servicio-card" data-aos="fade-up" data-aos-delay="200">
