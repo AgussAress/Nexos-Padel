@@ -1,7 +1,7 @@
 // src/sections/Nosotros.js
 import React from "react";
 import "../styles/Nosotros.css";
-import equipoImg from "../assets/raquetazo.jpg";
+import equipoImg from "../assets/Quienessomos.jpg";
 
 const Nosotros = () => {
   return (

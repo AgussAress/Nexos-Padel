@@ -1,13 +1,11 @@
 // src/sections/Partners.js
 import React from "react";
 import "../styles/Partners.css";
-import { FaHandshake, FaUserTie, FaUsers, FaBuilding, FaPlane } from "react-icons/fa";
+import { FaHandshake } from "react-icons/fa";
 
-// ASUME QUE ESTAS IMÁGENES ESTÁN EN TU CARPETA DE ASSETS
-import marioZayasImg from "../assets/marioZayas.jpg"; 
-import diegoCimiottoImg from "../assets/DiegoCimotto.jpg"; 
-import clubNobleGebaImg from "../assets/nobleGeba.png"; 
+// Importación de imágenes
 import fernandaTolozaImg from "../assets/ferToloza.png"; 
+import brendaGendinImg from "../assets/bgendin.jpg"; // Asegúrate de que el nombre coincida
 
 const Partners = () => {
   return (
@@ -31,38 +29,8 @@ const Partners = () => {
 
         <div className="partners-cards">
 
-          {/* MARIO ZAYAS */}
-          <div className="partner-card" data-aos="fade-right">
-            <div className="partner-img-container">
-              <img src={marioZayasImg} alt="Mario Zayas" className="partner-img" />
-            </div>
-            <h3>Mario Zayas</h3>
-            <h4>Coordinador de la actividad deportiva</h4>
-            <p>
-              A cargo del Staff de profesores. Entrenador Profesional de Padel, coach, formador de jugadores y profesores.
-            </p>
-            <p>
-              Más de 20 años de experiencia, entrenando jugadores/as de todos los niveles en diferentes etapas de su carrera. Estuvo a cargo de la Formación de deportistas profesionales como Delfina Brea, Aranza Osoro, Denis Perino, entre otros.
-            </p>
-          </div>
-
-          {/* LIC. DIEGO CIMIOTTO */}
-          <div className="partner-card" data-aos="fade-up">
-            <div className="partner-img-container">
-              <img src={diegoCimiottoImg} alt="Lic Diego Cimiotto" className="partner-img" />
-            </div>
-            <h3>Lic Diego Cimiotto</h3>
-            <h4>CHRO y Lic. En Psicología, Ceo Limón Consultora RH</h4>
-            <p>
-              Con más de 20 años de experiencia gestionando talento en diversas industrias. Su trayectoria combina un enfoque estratégico y humano, orientado a maximizar el potencial de las personas y alcanzar los objetivos organizacionales.
-            </p>
-            <p>
-              A cargo de la charla de Bienestar Organizacional.
-            </p>
-          </div>
-
           {/* FERNANDA TOLOZA */}
-          <div className="partner-card" data-aos="fade-up" data-aos-delay="200">
+          <div className="partner-card" data-aos="fade-up">
             <div className="partner-img-container">
               <img src={fernandaTolozaImg} alt="Fernanda Toloza" className="partner-img" />
             </div>
@@ -75,18 +43,19 @@ const Partners = () => {
               Especialista en coordinación de equipos, gestión de proyectos y calidad de servicio, destaca por su capacidad organizativa, sus sólidas habilidades interpersonales y su compromiso con la excelencia.
             </p>
           </div>
-          
-          {/* CLUB NOBLE GEBA */}
-          <div className="partner-card" data-aos="fade-left">
+
+          {/* BRENDA GENDIN */}
+          <div className="partner-card" data-aos="fade-up" data-aos-delay="200">
             <div className="partner-img-container">
-              <img src={clubNobleGebaImg} alt="Club Noble Geba" className="partner-img" />
+              <img src={brendaGendinImg} alt="Brenda Gendin" className="partner-img" />
             </div>
-            <h3>Club Noble Geba</h3>
+            <h3>Brenda Gendin</h3>
+            <h4>Co-Founder</h4>
             <p>
-              Un predio extraordinario, ubicado en pleno Palermo, frente a la sede San Martín del Club GEBA.
+              Licenciada en Relaciones del Trabajo y Magíster en Coaching y Cambio Organizacional, con más de 20 años acompañando líderes y equipos en grandes corporaciones y startups de alto impacto.
             </p>
             <p>
-              Disponemos de cuatro canchas de pádel techadas, un bar, vestuarios totalmente equipados, estacionamiento privado, seguridad y personal médico presente en el complejo las 24 horas.
+              Especialista en cultura organizacional, desarrollo de equipos y marca empleadora, combina su mirada estratégica con una profunda vocación por las personas — dentro y fuera de la cancha.
             </p>
           </div>
 

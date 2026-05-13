@@ -12,10 +12,10 @@ import {
   FaGlobeAmericas, 
   FaBoxOpen 
 } from "react-icons/fa"; 
-import teamImg from "../assets/catering.jpg";
+import teamImg from "../assets/ComidaFruta.png";
 import clientesImg from "../assets/morfando.jpeg";
-import clinicasImg from "../assets/clinicas.jpg";
-import canchasPadel from "../assets/canchasPadel.jpg";
+import clinicasImg from "../assets/Clinicadepadel.jpg";
+
 
 const Experiencias = () => {
   return (
